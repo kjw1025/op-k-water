@@ -1,0 +1,206 @@
+@charset "utf-8";
+@import url('font.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline-style: none; */
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Noto Sans KR', 'Titillium Web', sans-serif;
+  font-size: 15px;
+  color: #222;
+  line-height: 1.4;
+}
+
+/* 공통클래스 */
+.clearfix::after {
+  content: '';
+  position: relative;
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+.inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* 고정메뉴 */
+.fix-wrap {
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: block;
+  z-index: 99999;
+}
+
+/* 레이아웃 */
+.wrap {
+  position: relative;
+  display: block;
+}
+
+/* 상단 */
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 70px;
+  background-color: #fff;
+  z-index: 9999;
+}
+
+.header .inner {
+  display: flex;
+  justify-content: space-between;
+}
+.header .inner::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0px;
+  width: 100vw;
+  height: 70px;
+  background-color: transparent;
+  z-index: 9;
+
+  box-shadow: 0 3px 15px 0 rgb(0 0 0 / 8%);
+}
+
+.logo {
+  display: inline-block;
+  width: 87px;
+  height: 70px;
+  background: url('../images/logo.png') no-repeat center;
+  background-size: contain;
+}
+
+.gnb {  
+}
+
+.menu {
+  display: flex;
+}
+.menu > li {
+  width: 180px;
+  background-color: #fff;
+  transition: background-color 0.5s;
+  border-left: 1px solid #ebebeb;
+}
+.menu > li:last-child {
+  border-right: 1px solid #ebebeb;
+}
+
+.menu > li:hover {  
+  background-color: #ecf3fb;
+}
+
+.mainmenu {
+  display: block;
+  font-size: 21px;
+  line-height: 70px;
+  text-align: center;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(177, 201, 229, 0);
+  transition: border 0.5s;
+  z-index: 999;
+}
+.menu > li:hover .mainmenu {
+  border-bottom: 1px solid rgba(177, 201, 229, 1);
+}
+
+.submenu {
+  padding: 25px;
+  height: 100%;
+}
+.submenu li {
+  margin-bottom: 10px;  
+}
+.submenu li:last-child {
+  margin-bottom: 0px;  
+}
+.submenu li a {
+  font-size: 16px;
+  color: #5a5a5a;
+  letter-spacing: -0.5px;
+}
+
+.help {
+  margin-top: 24px;
+}
+
+.help-list {}
+
+.help-list li {
+  float: left;
+  margin-left: 14px;
+}
+
+.help-list li:first-child {
+  margin-right: 14px;
+}
+
+.help-list li:first-child a {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* 소개 */
+.about {
+  position: relative;
+  display: block;
+}
+
+/* 서비스 */
+.service {
+  position: relative;
+  display: block;
+}
+
+/* 문화 */
+.culture {
+  position: relative;
+  display: block;
+}
+
+/* 채용 */
+.job {
+  position: relative;
+  display: block;
+}
+
+/* 하단 */
+.footer {
+  position: relative;
+  display: block;
+}
